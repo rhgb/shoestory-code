@@ -15,10 +15,9 @@
 		android:allowBackup="true">
         <activity
             android:name="org.monospace.shoestory.EntranceActivity"
-            android:label="@string/title_activity_entrance" android:screenOrientation="sensorLandscape">
+            android:label="@string/title_activity_entrance" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

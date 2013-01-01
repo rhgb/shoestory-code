@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="backgrounds">
+		<item>@drawable/bg_act_0</item>
+		<item>@drawable/bg_act_1</item>
+		<item>@drawable/bg_act_2</item>
+		<item>@drawable/bg_act_3</item>
+		<item>@drawable/bg_act_4</item>
+		<item>@drawable/bg_act_5</item>
+		<item>@drawable/bg_act_6</item>
+		<item>@drawable/bg_act_7</item>
+		<item>@drawable/bg_act_8</item>
+		<item>@drawable/bg_act_9</item>
+		
+	</array>
+</resources>

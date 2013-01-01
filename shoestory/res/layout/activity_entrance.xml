@@ -5,9 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <org.monospace.shoestory.StoryView
-        android:id="@+id/story"
+    <org.monospace.shoestory.BackgroundView
+        android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp" >
+        <ImageButton
+	        android:id="@+id/button_prev"
+	        android:background="@null"
+	        android:layout_width="48dp"
+	        android:layout_height="48dp"
+	        android:scaleType="fitCenter"
+	        android:onClick="prevAct"
+	        android:src="@drawable/button_selector_prev" />
+	        
+	    <ImageButton
+	        android:id="@+id/button_next"
+	        android:background="@null"
+	        android:layout_width="48dp"
+	        android:layout_height="48dp"
+	        android:layout_marginLeft="8dp"
+	        android:scaleType="fitCenter"
+	        android:onClick="nextAct"
+	        android:src="@drawable/button_selector_next" />
+    </LinearLayout>
+
 
 </RelativeLayout>
