@@ -2,6 +2,7 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
@@ -9,14 +10,15 @@
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    
     <LinearLayout android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="8dp" >
+        
         <ImageButton
-	        android:id="@+id/button_prev"
 	        android:background="@null"
 	        android:layout_width="48dp"
 	        android:layout_height="48dp"
@@ -25,7 +27,6 @@
 	        android:src="@drawable/button_selector_prev" />
 	        
 	    <ImageButton
-	        android:id="@+id/button_next"
 	        android:background="@null"
 	        android:layout_width="48dp"
 	        android:layout_height="48dp"
@@ -34,6 +35,41 @@
 	        android:onClick="nextAct"
 	        android:src="@drawable/button_selector_next" />
     </LinearLayout>
-
-
+    <LinearLayout android:id="@+id/navigator"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" >
+	    
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+            <ImageButton
+                android:layout_width="128dp"
+                android:layout_height="128dp" />
+            <ImageButton
+                android:layout_width="128dp"
+                android:layout_height="128dp" />
+            <ImageButton
+                android:layout_width="128dp"
+                android:layout_height="128dp" />
+            
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+            <ImageButton
+                android:layout_width="128dp"
+                android:layout_height="128dp" />
+            <ImageButton
+                android:layout_width="128dp"
+                android:layout_height="128dp" />
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+	
 </RelativeLayout>

@@ -10,6 +10,7 @@ import android.view.View;
 
 public class BackgroundView extends View {
 
+	private TypedArray bgArray;
 	static private int mAct = 0;
 	private int mOffsetX = 0;
 	private int mOffsetY = 0;
@@ -17,13 +18,12 @@ public class BackgroundView extends View {
 	
 	public BackgroundView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		// TODO Auto-generated constructor stub
+		Resources res = getResources();
+		bgArray = res.obtainTypedArray(R.array.backgrounds);
 	}
 	
 	@Override
 	protected void onDraw(Canvas canvas) {
-		Resources res = getResources();
-		TypedArray bgArray = res.obtainTypedArray(R.array.backgrounds);
 		Drawable bg = bgArray.getDrawable(mAct);
 		// calculate position
 		int rw = bg.getIntrinsicWidth();
@@ -48,7 +48,7 @@ public class BackgroundView extends View {
 	}
 
 	public void setAct(int act) {
-		if (act >= 0 && act <= 9) {
+		if (act >= 0 && act < bgArray.length()) {
 			mAct = act;
 			invalidate(0, 0, getWidth(), getHeight());
 		}
