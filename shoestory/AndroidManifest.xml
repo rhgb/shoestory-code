@@ -21,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".EntranceActivity.MusicIntentReceiver">
+        <receiver android:name=".EntranceActivity$MusicIntentReceiver">
 		   <intent-filter>
 		      <action android:name="android.media.AUDIO_BECOMING_NOISY" />
 		   </intent-filter>
